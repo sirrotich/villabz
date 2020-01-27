@@ -1,0 +1,105 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://www.army-technology.com/wp-content/uploads/sites/3/2019/09/shutterstock_1141257410_1.1024_0_1-e1567526758455.jpg" type="image/gif" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Web, Design, Villab, Cheap Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Grayrids">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+    <title> {{title}} </title>
+    {% else %}
+    <title>villab technologies</title>
+    {% endif %}
+
+    {{ form.media }}
+
+    {% block styles %}
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/slick.css'%}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+        <link rel="stylesheet" href="{% static 'css/LineIcons.css'%}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+        <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+        <link rel="stylesheet" href="{% static 'css/default.css'%}">
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">    
+        <link rel="stylesheet" href="{% static 'css/style.css.map'%}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Billabong' rel='stylesheet'>
+        <link rel="shortcut icon" href="/static/img/instagram.jpg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Courgette|Gochi+Hand|Permanent+Marker|Rock+Salt&display=swap" rel="stylesheet">
+     {% endblock %}
+   
+</head>
+<body>
+
+    {% block content%}
+    {% endblock %}
+
+    {% block scripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="1612473758875479">
+      </div>
+        {% bootstrap_javascript %}
+        <script src="{% static 'js/popper.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.min.js'%}"></script>
+        <script src="{% static 'js/slick.min.js'%}"></script>
+        <script src="{% static 'js/popper.min.js'%}"></script>
+        <script src="{% static 'js/imagesloaded.pkgd.min.js'%}"></script>
+        <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>       
+        <script src="{% static 'js/waypoints.min.js'%}"></script>    
+        <script src="{% static 'js/jquery.counterup.min.js'%}"></script>    
+        <script src="{% static 'js/circles.min.js'%}"></script>     
+        <script src="{% static 'js/wow.js'%}"></script>   
+        <script src="{% static 'js/headroom.min.js'%}"></script>     
+        <script src="{% static 'js/jquery.appear.min.js'%}"></script>     
+        <script src="{% static 'js/wow.min.js'%}"></script>     
+        <script src="{% static 'js/waypoints.min.js'%}"></script>      
+        <script src="{% static 'js/jquery.nav.js'%}"></script>
+        <script src="{% static 'js/scrollIt.min.js'%}"></script>   
+        <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+        <script src="{% static 'js/main.js'%}"></script>
+        <script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+        <script src="{% static 'js/vendor/modernizr-3.7.1.min.js'%}"></script>
+
+
+    {% endblock %}
+</body>
+</html>
